@@ -16,7 +16,7 @@ public struct WeaponSettingsOverrides
         bool Enabled = true,
         bool UseDefault = false,
         float Position = 0.1f,
-        float Sensitivity = 0.15f,
+        float Sensitivity = 0.115f,
         float MaxAngle = 5.0f,
         float AimMultiplier = 0.0f
     )
