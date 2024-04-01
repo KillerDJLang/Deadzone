@@ -1,16 +1,25 @@
-﻿using BepInEx;
+using BepInEx;
 using BepInEx.Configuration;
+using DrakiaXYZ.VersionChecker;
+using System;
 
 namespace DeadzoneMod;
 
-[BepInPlugin("me.DJ.deadzone", "Deadzone", "1.0.0.0")]
+[BepInPlugin("DJ.Deadzone", "Deadzone", "1.1.0")]
 public class Plugin : BaseUnityPlugin
 {
+    public const int TarkovVersion = 29197;
+
     public static PluginSettings Settings = new();
     public static bool Enabled => Settings.Enabled != null && Settings.Enabled.Value;
 
     void Awake()
     {
+        if (!VersionChecker.CheckEftVersion(Logger, Info, Config))
+        {
+            throw new Exception("Invalid EFT Version");
+        }
+
         Settings.Enabled = Config.Bind("Values", "Global deadzone enabled", true, new ConfigDescription("Will deadzone be enabled for any group"));
 
         Settings.WeaponSettings = new WeaponSettingsGroup(
