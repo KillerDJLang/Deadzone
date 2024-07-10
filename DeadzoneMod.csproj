@@ -1,10 +1,10 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net472</TargetFramework>
+    <TargetFramework>net471</TargetFramework>
     <AssemblyName>DeadzoneMod</AssemblyName>
     <Description>An sptarkov mod to add deadzone in hip aim</Description>
-    <Version>1.0.0</Version>
+    <Version>1.2.0</Version>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <LangVersion>latest</LangVersion>
     <RestoreAdditionalProjectSources>
@@ -24,40 +24,46 @@
 
   <ItemGroup>
     <Reference Include="0Harmony">
-      <HintPath>Dependancies\0Harmony.dll</HintPath>
-    </Reference>
-    <Reference Include="Aki.Common">
-      <HintPath>dependencies\Aki.Common.dll</HintPath>
-    </Reference>
-    <Reference Include="Aki.Reflection">
-      <HintPath>dependencies\Aki.Reflection.dll</HintPath>
+      <HintPath>..\..\..\BepInEx\core\0Harmony.dll</HintPath>
     </Reference>
     <Reference Include="Assembly-CSharp">
-      <HintPath>dependencies\Assembly-CSharp.dll</HintPath>
+      <HintPath>..\..\Managed\Assembly-CSharp.dll</HintPath>
     </Reference>
     <Reference Include="BepInEx">
-      <HintPath>dependencies\BepInEx.dll</HintPath>
+      <HintPath>..\..\..\BepInEx\core\BepInEx.dll</HintPath>
     </Reference>
     <Reference Include="Comfort">
-      <HintPath>dependencies\Comfort.dll</HintPath>
+      <HintPath>..\..\Managed\Comfort.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json">
-      <HintPath>dependencies\Newtonsoft.Json.dll</HintPath>
+      <HintPath>..\..\Managed\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="spt-common">
+      <HintPath>..\..\..\BepInEx\plugins\spt\spt-common.dll</HintPath>
+    </Reference>
+    <Reference Include="spt-reflection">
+      <HintPath>..\..\..\BepInEx\plugins\spt\spt-reflection.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine">
-      <HintPath>dependencies\UnityEngine.dll</HintPath>
+      <HintPath>..\..\Managed\UnityEngine.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.CoreModule">
-      <HintPath>dependencies\UnityEngine.CoreModule.dll</HintPath>
+      <HintPath>..\..\Managed\UnityEngine.CoreModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AudioModule">
-      <HintPath>dependencies\UnityEngine.AudioModule.dll</HintPath>
+      <HintPath>..\..\Managed\UnityEngine.AudioModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.IMGUIModule">
+      <HintPath>..\..\Managed\UnityEngine.IMGUIModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.InputModule">
-      <HintPath>dependencies\UnityEngine.InputModule.dll</HintPath>
+      <HintPath>..\..\Managed\UnityEngine.InputModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.InputLegacyModule">
-      <HintPath>dependencies\UnityEngine.InputLegacyModule.dll</HintPath>
+      <HintPath>..\..\Managed\UnityEngine.InputLegacyModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TextRenderingModule">
+      <HintPath>..\..\Managed\UnityEngine.TextRenderingModule.dll</HintPath>
     </Reference>
   </ItemGroup>
 

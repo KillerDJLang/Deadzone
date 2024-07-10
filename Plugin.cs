@@ -5,10 +5,10 @@ using System;
 
 namespace DeadzoneMod;
 
-[BepInPlugin("DJ.Deadzone", "Deadzone", "1.1.0")]
+[BepInPlugin("DJ.Deadzone", "Deadzone", "1.2.0")]
 public class Plugin : BaseUnityPlugin
 {
-    public const int TarkovVersion = 29197;
+    public const int TarkovVersion = 30626;
 
     public static PluginSettings Settings = new();
     public static bool Enabled => Settings.Enabled != null && Settings.Enabled.Value;
